@@ -18,8 +18,10 @@ export class ProductosService {
     this.http.get('https://mitiendaangular-default-rtdb.firebaseio.com/productos_idx.json')
     .subscribe( (resp:any) => {
       this.productos = resp;
-      console.log(resp);
-      this.cargando = false;
+
+      setTimeout(() => {
+        this.cargando = false;  
+      }, 3000);
     });
   }
 }
