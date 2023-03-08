@@ -1,0 +1,46 @@
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@media (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+
+to {
+  opacity: 1;
+}
+}
+
+.fadeIn {
+-webkit-animation-name: fadeIn;
+animation-name: fadeIn;
+}
+
+body{
+  background: rgb(255,255,255);
+  background: linear-gradient(45deg, rgba(255,255,255,0.9023984593837535) 0%, rgba(213,242,239,1) 42%, rgb(206, 233, 231) 65%, rgba(157,225,233,1) 100%);
+}
