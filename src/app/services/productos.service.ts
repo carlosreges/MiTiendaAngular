@@ -21,7 +21,11 @@ export class ProductosService {
 
       setTimeout(() => {
         this.cargando = false;  
-      }, 3000);
+      }, 6000);
     });
+  }
+
+  getProducto(id:string){
+    return this.http.get(`https://mitiendaangular-default-rtdb.firebaseio.com/productos/${id}.json`);
   }
 }
